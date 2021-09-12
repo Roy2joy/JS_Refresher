@@ -95,18 +95,28 @@ class Vehicle{
 }
 
 class Drive extends Vehicle{
+    #salary;
     constructor(){
         super();
     }
     driverCar(){
         this.name='duccati'
+        this.#salary=10;
         console.log(this.name)
     }
+    #increaseSalary(){
+        this.#salary+=100;
+    }
+    modifySalary(){
+        this.#increaseSalary();
+        console.log(this.#salary);
+    }
+
 }
 
 let temp=new Drive();
 temp.driverCar();
-
+temp.modifySalary();
 let temp2=new Vehicle(); // as it is abtract class
 
 // ----------------------------------------------------------------------------------
