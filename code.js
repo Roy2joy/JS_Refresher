@@ -1,5 +1,6 @@
 // //full documentation is provided in my oneNote
 
+// Page1:(Let vs const vs var)  and what is Arrow Function
 // //---------------------------------------const vs let vs var
 // function tempVAR(a){
 //     console.log(input) //will work b/c of hoisted property of var (but since no assigment so undefined)
@@ -42,81 +43,101 @@
 // }
 // console.log(squareSum(1,3));
 
-//OOP Cooncepts
 
-//inheritance  (code resuability)
-//poly (ability to make code behave different at run time based on type of object.change of code.)
-//abstraction (hide implementation details-abstract something from its user -also another definition in design paradigm)
-//encapsulation (providing controlled interface for implementation ,provide complete packages)
+// //Page2:Concepts of Object Oriented Programming------------------------------------
+
+// /*
+// //---------------------------------------------------------------------
+// //---------------------------------Concepts of Object Oriented Programming
+// // ---------------------------------------------------------------------
+// */
+
+// //inheritance  (code resuability)
+// //poly (ability to make code behave different at run time based on type of object.change of code.)
+// //abstraction (hide implementation details-abstract something from its user -also another definition in design paradigm)
+// //encapsulation (providing controlled interface for implementation ,provide complete packages)
 
 
 
-//---------------------------------------------------------------------
-//---------------------------------INHERITANCE
-// ---------------------------------------------------------------------
+// //---------------------------------------------------------------------
+// //---------------------------------INHERITANCE
+// // ---------------------------------------------------------------------
 
-//-----------------------inheritance with public members and private members
-class Engine{
-    chasisCountry
-    #secretNote
-    constructor(ch)
-    {
-        this.chasisCountry=ch;
-        this.#secretNote="this is top secret car"
-    }
-    printSecret=()=>{
-        console.log(this.#secretNote);
-    }
-}
+// //-----------------------inheritance with public members and private members
+// class Engine{
+//     chasisCountry
+//     #secretNote
+//     constructor(ch)
+//     {
+//         this.chasisCountry=ch;
+//         this.#secretNote="this is top secret car"
+//     }
+//     printSecret=()=>{
+//         console.log(this.#secretNote);
+//     }
+// }
 
-class Car extends Engine{
-    constructor(chCountry){
-        super(chCountry)  //calling a parent constructor
-    }
-    print(){
-        console.log(this.chasisCountry);
-        console.log('\nWith the help of private constructor of super class')
-        this.printSecret();
-    }
-}
+// class Car extends Engine{
+//     constructor(chCountry){
+//         super(chCountry)  //calling a parent constructor
+//     }
+//     print(){
+//         console.log(this.chasisCountry);
+//         console.log('\nWith the help of private constructor of super class')
+//         this.printSecret();
+//     }
+// }
 
-let car=new Car('Japan');
-car.print();
+// let car=new Car('Japan');
+// car.print();
 
-//--------------------------ABSTRACT CLASS-------------------------------------
-class Vehicle{
-    name;
-    constructor(){
-            console.log('abstract constructor called')
-            if(this.constructor === Vehicle){
-                throw new Error("Cant declare abstract class")
-            }
-    }    
-}
+// //--------------------------ABSTRACT CLASS(advaced concept of abstraction)------------------
+// //-------------------
+// class Vehicle{
+//     name;
+//     constructor(){
+//             console.log('abstract constructor called')
+//             if(this.constructor === Vehicle){
+//                 throw new Error("Cant declare abstract class")
+//             }
+//     }    
+// }
 
-class Drive extends Vehicle{
-    #salary;
-    constructor(){
-        super();
-    }
-    driverCar(){
-        this.name='duccati'
-        this.#salary=10;
-        console.log(this.name)
-    }
-    #increaseSalary(){
-        this.#salary+=100;
-    }
-    modifySalary(){
-        this.#increaseSalary();
-        console.log(this.#salary);
-    }
+// class Drive extends Vehicle{
+//     #salary;
+//     constructor(){
+//         super();
+//     }
+//     driverCar(){
+//         this.name='duccati'
+//         this.#salary=10;
+//         console.log(this.name)
+//     }
+//     #increaseSalary(){
+//         this.#salary+=100;
+//     }
+//     modifySalary(){
+//         this.#increaseSalary();
+//         console.log(this.#salary);
+//     }
 
-}
+// }
 
-let temp=new Drive();
-temp.driverCar();
-temp.modifySalary();
-let temp2=new Vehicle(); // as it is abtract class
+// let temp=new Drive();
+// temp.driverCar();
+// temp.modifySalary();
+// let temp2=new Vehicle(); // as it is abtract class
 
-// ----------------------------------------------------------------------------------
+// // ----------------------------------------------------------------------------------
+
+// //---------------------Concept of Polymorphism -------------------------------
+// /*
+// Since JS is dynamically typed language so there is no need to implement polymorphism 
+// it by default can change code on run time (polymorphism is needed for languages like 
+//     static typed language such as JAva and C++)
+// */ 
+
+
+//Page3:
+
+
