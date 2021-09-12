@@ -43,3 +43,70 @@
 // console.log(squareSum(1,3));
 
 //OOP Cooncepts
+
+//inheritance  (code resuability)
+//poly (ability to make code behave different at run time based on type of object.change of code.)
+//abstraction (hide implementation details-abstract something from its user -also another definition in design paradigm)
+//encapsulation (providing controlled interface for implementation ,provide complete packages)
+
+
+
+//---------------------------------------------------------------------
+//---------------------------------INHERITANCE
+// ---------------------------------------------------------------------
+
+//-----------------------inheritance with public members and private members
+class Engine{
+    chasisCountry
+    #secretNote
+    constructor(ch)
+    {
+        this.chasisCountry=ch;
+        this.#secretNote="this is top secret car"
+    }
+    printSecret=()=>{
+        console.log(this.#secretNote);
+    }
+}
+
+class Car extends Engine{
+    constructor(chCountry){
+        super(chCountry)  //calling a parent constructor
+    }
+    print(){
+        console.log(this.chasisCountry);
+        console.log('\nWith the help of private constructor of super class')
+        this.printSecret();
+    }
+}
+
+let car=new Car('Japan');
+car.print();
+
+//--------------------------ABSTRACT CLASS-------------------------------------
+class Vehicle{
+    name;
+    constructor(){
+            console.log('abstract constructor called')
+            if(this.constructor === Vehicle){
+                throw new Error("Cant declare abstract class")
+            }
+    }    
+}
+
+class Drive extends Vehicle{
+    constructor(){
+        super();
+    }
+    driverCar(){
+        this.name='duccati'
+        console.log(this.name)
+    }
+}
+
+let temp=new Drive();
+temp.driverCar();
+
+let temp2=new Vehicle(); // as it is abtract class
+
+// ----------------------------------------------------------------------------------
